@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { DraggableComponent } from './draggable/draggable.component';
 import { MouseEventsComponent } from './mouse-events/mouse-events.component';
+import { ResizeableComponent } from './resizeable/resizeable.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DraggableComponent,
-    MouseEventsComponent
+    MouseEventsComponent,
+    ResizeableComponent
   ],
   imports: [
     BrowserModule

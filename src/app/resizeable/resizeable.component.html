@@ -1,0 +1,26 @@
+<div [ngClass]="'wrapper'">
+
+
+  <div #outerDiv
+    class="container">
+
+    Erick Morales Silva...
+
+    <div class="resizer-right"
+      (mousedown)="onResize(outerDiv, rightDiv, lastDiv, $event)">
+
+    </div>
+
+  </div>
+
+  <div #rightDiv
+    class="right-container">
+    Another container...
+  </div>
+
+  <div #lastDiv
+    class="last-container">
+    Last container...
+  </div>
+
+</div>

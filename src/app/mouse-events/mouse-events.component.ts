@@ -7,17 +7,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MouseEventsComponent implements OnInit {
 
-  private left: number = 0;
-  private right: number = 0;
-  private top: number = 0;
-  private bottom: number = 0;
-  private width: number = 0;
-  private height: number = 0;
+  private b_left: number = 0;
+  private b_right: number = 0;
+  private b_top: number = 0;
+  private b_bottom: number = 0;
+  private b_width: number = 0;
+  private b_height: number = 0;
+
+  private r_left: number = 0;
+  private r_right: number = 0;
+  private r_top: number = 0;
+  private r_bottom: number = 0;
+  private r_width: number = 0;
+  private r_height: number = 0;
 
   constructor() { }
 
   ngOnInit() {
     let wrapper = document.querySelector('.wrapper');
+
+    this.r_left = wrapper.getBoundingClientRect().left;
+    this.r_right = wrapper.getBoundingClientRect().right;
+    this.r_top = wrapper.getBoundingClientRect().top;
+    this.r_bottom = wrapper.getBoundingClientRect().bottom;
+
+    this.r_width = wrapper.getBoundingClientRect().width;
+    this.r_height = wrapper.getBoundingClientRect().height;
 
     wrapper.addEventListener('mousemove', (e: MouseEvent) => {
       console.log(`==> mousemove: `);
@@ -25,14 +40,14 @@ export class MouseEventsComponent implements OnInit {
       console.log(`e.pageX: ${e.pageX} - e.pageY: ${e.pageY}`);
     });
 
-    let container = document.querySelector('.container');
+    let container = document.querySelector('.container') as HTMLElement;
 
-    this.left = container.getBoundingClientRect().left;
-    this.right = container.getBoundingClientRect().right;
-    this.top = container.getBoundingClientRect().top;
-    this.bottom = container.getBoundingClientRect().bottom;
+    this.b_left = container.getBoundingClientRect().left;
+    this.b_right = container.getBoundingClientRect().right;
+    this.b_top = container.getBoundingClientRect().top;
+    this.b_bottom = container.getBoundingClientRect().bottom;
 
-    this.width = container.getBoundingClientRect().width;
-    this.height = container.getBoundingClientRect().height;
+    this.b_width = container.getBoundingClientRect().width;
+    this.b_height = container.getBoundingClientRect().height;
   }
 }

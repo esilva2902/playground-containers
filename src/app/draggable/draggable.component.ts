@@ -12,7 +12,7 @@ export class DraggableComponent implements OnInit {
   ngOnInit() {
   }
 
-  onMouseDown(e) {
+  onMouseDown(e: MouseEvent) {
     console.log(`e.clientX: ${e.clientX}`);
   }
 

@@ -1,7 +1,10 @@
-<div [ngClass]="'wrapper'" 
-  (onmousedown)="onMouseDown($event)"
-  (click)="onClick($event)">
+<div 
+  [ngClass]="'wrapper'" 
+  (mousedown)="onMouseDown($event)">
 
-Erick
+  <div #refDiv
+    class="container">
+    <div class="resizer-right"></div>
+  </div>
 </div>
 
