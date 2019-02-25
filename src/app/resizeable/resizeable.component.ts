@@ -18,6 +18,12 @@ export class ResizeableComponent implements OnInit {
   onResize(outerDiv: HTMLElement, rightDiv: HTMLElement, lastDiv: HTMLElement, e: MouseEvent) {
     e.preventDefault();
 
+    // console.log(`outerDiv.getBoundingClientRect(): `, outerDiv.getBoundingClientRect());
+    // console.log(`outerDiv: `, outerDiv);
+    // console.log(`outerDiv.style.left: `, outerDiv.style.left);
+    // console.log(`outerDiv.style.width: `, outerDiv.style.width);
+    // console.log(`outerDiv.style: `, outerDiv.style);
+
     let original_width = outerDiv.getBoundingClientRect().right - outerDiv.getBoundingClientRect().left;
     let original_mouse_x = e.pageX;
 

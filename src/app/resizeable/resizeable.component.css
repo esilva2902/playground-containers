@@ -3,11 +3,11 @@
     box-sizing: border-box;
 
     width: 700px;
-    height: 400px;
+    height: 500px;
 
     border: 3px dotted red; 
 
-    margin: 0 auto;
+    margin: 100px auto;
     padding: 10px;
     overflow: auto;
 }
