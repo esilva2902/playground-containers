@@ -1,10 +1,8 @@
-:host {
-  height: 200px;
+.resizer {
+  height: 64px;
   width: 10px;
   background: rgba(0, 0, 0, .12);
   border: 1px solid red;
+
 }
 
-.resize-cursor {
-  cursor: col-resize;
-}

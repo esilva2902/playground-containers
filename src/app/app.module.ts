@@ -6,6 +6,7 @@ import { DraggableComponent } from './draggable/draggable.component';
 import { MouseEventsComponent } from './mouse-events/mouse-events.component';
 import { ResizeableComponent } from './resizeable/resizeable.component';
 import { SeparatorComponent } from './separator/separator.component';
+import { ResizerDirective } from './common/resizer.directive';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { SeparatorComponent } from './separator/separator.component';
     DraggableComponent,
     MouseEventsComponent,
     ResizeableComponent,
-    SeparatorComponent
+    SeparatorComponent,
+    ResizerDirective
   ],
   imports: [
     BrowserModule

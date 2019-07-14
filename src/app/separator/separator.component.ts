@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, HostBinding, HostListener } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'separator',
@@ -8,27 +8,10 @@ import { Component, OnInit, Input, HostBinding, HostListener } from '@angular/co
 export class SeparatorComponent implements OnInit {
 
   @Input('height') height: string;
-  private isCursorOver: boolean = false;
-
+  
   constructor() { }
 
   ngOnInit() {
-  }
-
-  @HostBinding('class.resize-cursor')
-  get resizeCursor() {
-    return this.isCursorOver;
-  }
-
-  @HostListener('mouseover', ['$event'])
-  mouseOver($event) {
-    console.log($event);
-    this.isCursorOver = true;
-  }
-
-  @HostListener('mouseleave')
-  mouseLeave() {
-    this.isCursorOver = false;
   }
 
 }
